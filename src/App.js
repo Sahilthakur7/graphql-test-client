@@ -1,3 +1,4 @@
+import AddPlayer from './components/AddPlayer';
 import Players from './components/Players';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <div>
       <h1>Player List</h1>
       <Players />
+      <AddPlayer />
     </div>
   );
 }

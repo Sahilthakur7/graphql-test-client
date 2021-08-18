@@ -7,13 +7,21 @@ const Players = () => {
     notifyOnNetworkStatusChange: true,
   });
 
+  const renderPlayers = () => {
+    const playersList = data?.players?.map((player) => (
+      <li key={player.id}>{player.name}</li>
+    ));
+
+    return playersList;
+  };
+
   if (loading) {
     return <div>Loading hi hai tbse</div>;
   }
   return (
     <div>
       <ul>
-        <li>Player name</li>
+        {renderPlayers()}
       </ul>
     </div>
   );
